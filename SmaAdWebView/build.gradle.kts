@@ -42,7 +42,7 @@ afterEvaluate{
             create("release", MavenPublication::class.java) {
                 groupId = "com.github.ktoshiiio"
                 artifactId = "smaad-kotlin-sdk_20240328"
-                version = "0.0.4"
+                version = "0.0.5"
                 artifact("$buildDir/outputs/aar/SmaAdWebView-release.aar")
             }
         }
