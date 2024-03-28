@@ -40,9 +40,9 @@ afterEvaluate{
     publishing{
         publications {
             create("release", MavenPublication::class.java) {
-                groupId = "tech.gmo"
-                artifactId = "smaad-kotlin-sdk"
-                version = "0.0.1"
+                groupId = "com.github.ktoshiiio"
+                artifactId = "smaad-kotlin-sdk_20240328"
+                version = "0.0.4"
                 artifact("$buildDir/outputs/aar/SmaAdWebView-release.aar")
             }
         }

@@ -66,16 +66,14 @@ public class InAppWebViewFlutterPlugin {
 //            registrar.context(), registrar.messenger(), registrar.activity(), registrar.platformViewRegistry(), registrar.view());
 //  }
 
-//  @Override
-//  public void onAttachedToEngine(FlutterPluginBinding binding) {
-//    this.flutterAssets = binding.getFlutterAssets();
-//
-//    // Shared.activity could be null or not.
-//    // It depends on who is called first between onAttachedToEngine event and onAttachedToActivity event.
-//    //
-//    onAttachedToEngine(
-//            binding.getApplicationContext(), binding.getBinaryMessenger(), this.activity, binding.getPlatformViewRegistry(), null);
-//  }
+  public void OnAttachedToEngine(Activity activity) {
+
+    // Shared.activity could be null or not.
+    // It depends on who is called first between onAttachedToEngine event and onAttachedToActivity event.
+    //
+    onAttachedToEngine(
+            activity.getApplicationContext(), activity);
+  }
 
   @SuppressWarnings("deprecation")
   private void onAttachedToEngine(Context applicationContext, Activity activity) {
